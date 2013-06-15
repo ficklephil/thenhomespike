@@ -65,19 +65,35 @@
         //so we want the markers for each one
         function parseMarkers(json){
 
-           //get the array of property data
-            //run through each one
-            //print out all the markers to log
-               //console.log(json.response.listings)   //array
-
             var listings = json.response.listings;
             console.log(listings.length);
+
             for(var i=0; i < listings.length; i++){
                 console.log("Item Title " + listings[i].title);
                 console.log("Item Marker X " + listings[i].itemMarkerX);
                 console.log("Item Marker Y " + listings[i].itemMarkerY);
+
+                addItemToDisplay(listings[i].property_type,listings[i].itemMarkerX, listings[i].itemMarkerY);
             }
         }
+
+        function addItemToDisplay(itemType,x,y){
+
+            //add item to display-layer
+            console.log('add item to display');
+            $('.display-layer').append('<div class="'+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"></div>');
+
+        }
+
+        //use Jquery to add the html for a marker
+
+//        function createItem()
+//        {
+//            return ($<div></div>)
+//
+//
+//        }
+
 
         //lets parse the markers
 
@@ -161,27 +177,17 @@
   <!-- <div style="position:absolute; z-index:1;">
 	<canvas id="myCanvas" width="500" height="500"></canvas>
   </div> -->
-  <div>hello</div>
-  <div style="z-index:1; position:absolute; top:40px;left:200px;">
-	<div class="item-container"><a href="http://www.google.com">link</a></div>
-	
-  </div>
-  <div style="z-index:1; position:absolute; top:170px;left:200px;">dot</div>
-  
-  <div style="z-index:1; position:absolute; top:50px;left:400px;">
-  
-  
-	<div class="item-container">hi</div>
-  </div>
-  <div style="z-index:0; position:relative; top:0;" id="map-canvas"/>
+  <!--<div style="z-index:2; position:absolute; top:40px;left:200px;">-->
+	<!--<div class="item-container"><a href="http://www.google.com">link</a></div>-->
+    <!--</div>-->
 
-  
-	
-	
-	<div style="height:100px;">
-		hello
-	</div>
-   
-	
-  </body>
+  <div style="z-index:3; position:absolute; top:170px;left:200px;">x</div>
+
+  <!--<div style="z-index:2; position:absolute; top:50px;left:400px;">-->
+    <!--<div class="item-container">hi</div>-->
+  <!--</div>-->
+          <div>hello</div>
+        <div class="display-layer"/>
+        <div style="z-index:0; position:relative; top:0; " id="map-canvas"/>
+    </body>
 </html>

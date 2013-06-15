@@ -3,5 +3,39 @@
 	background-color:#99cc00;
 	height:80px;
 	width:56px;
+}
 
+.display-layer{
+
+    z-index:2;
+    position:absolute;
+    top:0px;
+    left:0px;
+    border:1px solid red;
+    width:100%;
+    height:100%
+}
+
+.house{
+
+
+    z-index:2;
+    position:absolute;
+
+    border-radius: 50%;
+    background-color: #99cc00;
+    width: 10px;
+    height: 10px;
+}
+
+.flat{
+
+
+    z-index:2;
+    position:absolute;
+
+    border-radius: 50%;
+    background-color: #ffcc00;
+    width: 10px;
+    height: 10px;
 }
