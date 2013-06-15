@@ -47,12 +47,36 @@
                 contentType: "application/json",
                 dataType: 'jsonp',
                 success: function(json) {
-                    console.log(JSON.stringify(json.request));
+                    //console.log(JSON.stringify(json.request));
+                    parseJson(json);
                 },
                 error: function(e) {
                     console.log(e.message);
                 }
             });
+        }
+
+        function parseJson(json)
+        {
+            parseMarkers(json);
+           // console.log(JSON.stringify(json));
+        }
+
+        //so we want the markers for each one
+        function parseMarkers(json){
+
+           //get the array of property data
+            //run through each one
+            //print out all the markers to log
+               //console.log(json.response.listings)   //array
+
+            var listings = json.response.listings;
+            console.log(listings.length);
+            for(var i=0; i < listings.length; i++){
+                console.log("Item Title " + listings[i].title);
+                console.log("Item Marker X " + listings[i].itemMarkerX);
+                console.log("Item Marker Y " + listings[i].itemMarkerY);
+            }
         }
 
         //lets parse the markers
