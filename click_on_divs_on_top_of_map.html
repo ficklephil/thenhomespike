@@ -23,10 +23,15 @@
 	
 		//ndow.onload = init;
 		
-		function getItemAPI(){
+		function getItemAPI(location){
             console.log('Get Item API');
 
-            var url = 'http://127.0.0.1:1337/?callback=?';
+            //var url = 'http://127.0.0.1:1337/?callback=?';
+
+            var mapWidth = $('#map-canvas').width();
+            var mapHeight = $('#map-canvas').height();
+
+            var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&callback=?';
 
             $.ajax({
                 type: 'GET',
@@ -52,6 +57,14 @@
 
         function parseMarkers(json){
 
+            console.log('parse markers');
+
+            var responseLat = json.response.locations[0].center_lat;
+            var responseLng = json.response.locations[0].center_long;
+
+           // console.log('lat + lng : ' + JSON.stringify(responseLat.center_lat));// + responseLng);
+            moveMap(responseLat,responseLng);
+
             var listings = json.response.listings;
             console.log(listings.length);
 
@@ -59,16 +72,25 @@
                 console.log("Item Title " + listings[i].title);
                 console.log("Item Marker X " + listings[i].itemMarkerX);
                 console.log("Item Marker Y " + listings[i].itemMarkerY);
+                console.log("Price " + listings[i].price);
 
-                addItemToDisplay(listings[i].property_type,listings[i].itemMarkerX, listings[i].itemMarkerY);
+                addItemToDisplay(listings[i].property_type,listings[i].itemMarkerX, listings[i].itemMarkerY,listings[i].price_formatted, listings[i].bedroom_number );
             }
         }
 
-        function addItemToDisplay(itemType,x,y){
+        function moveMap(responseLat,responseLng)
+        {
+            console.log('move map');
+            var locationLatLng = new google.maps.LatLng(responseLat, responseLng);
+             map.panTo(locationLatLng);
+        }
+
+        function addItemToDisplay(itemType,x,y,price_formatted,bedroom_number){
 
             //add item to display-layer
             console.log('add item to display');
-            $('.display-layer').append('<div class="'+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"></div>');
+            $('.display-layer').append('<div class="'+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"><div class="price">'+price_formatted+'</div>' +
+                    '<div class="beds">Beds '+bedroom_number+'</div></div>');
         }
 
         var map;
@@ -95,7 +117,7 @@
                 console.log(bounds);
             });
 
-            getItemAPI();
+
 			placeDotOnMapAtXY();
 		  }
 		  google.maps.event.addDomListener(window, 'load', initialize);
@@ -135,6 +157,13 @@
 		//link the dot to the image of the place
 		}
 
+        function search(){
+            console.log('Search for :' + $('.location-input').val());
+
+            var location = $('.location-input').val();
+            getItemAPI(location);
+        }
+
     </script>
   </head>
   <body>
@@ -145,6 +174,8 @@
 	<!--<div class="item-container"><a href="http://www.google.com">link</a></div>-->
     <!--</div>-->
 
+
+
   <div style="z-index:3; position:absolute; top:170px;left:200px;">x</div>
 
   <!--<div style="z-index:2; position:absolute; top:50px;left:400px;">-->
@@ -152,6 +183,13 @@
   <!--</div>-->
           <div>hello</div>
         <div class="display-layer"/>
+
+        <div class='search-layer'>
+          <input class='location-input' type='text'>
+          <input type="button" value="Let's go!" onclick="search()">
+        </div>
+
         <div style="z-index:0; position:relative; top:0; " id="map-canvas"/>
+
     </body>
 </html>

@@ -16,6 +16,13 @@
     height:100%
 }
 
+.search-layer{
+    z-index:3;
+    position:absolute;
+    border:1px solid red;
+    left:100px;
+}
+
 .house{
 
 
@@ -38,4 +45,14 @@
     background-color: #ffcc00;
     width: 10px;
     height: 10px;
+}
+
+.price{
+    position:absolute;
+    top:10px;
+}
+
+.beds{
+    position:absolute;
+    top:50px;
 }

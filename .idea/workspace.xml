@@ -4,9 +4,11 @@
     <list default="true" id="80d4b067-d484-40d7-a76c-89e645d33841" name="Default" comment="" />
     <ignored path="ThenHomeSpike.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/click_on_divs_on_top_of_map.html" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371364514312" ignored="false" />
-    <file path="C:/THEN_HOME/test-setup-grid-api/server/AddDivPixelToNestoriaOutput.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1370896304656" ignored="false" />
-    <file path="/spike_style.css" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371283144328" ignored="false" />
+    <file path="/click_on_divs_on_top_of_map.html" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371377850031" ignored="false" />
+    <file path="C:/THEN_HOME/test-setup-grid-api/server/AddDivPixelToNestoriaOutput.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371365247578" ignored="false" />
+    <file path="/spike_style.css" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371376033718" ignored="false" />
+    <file path="C:/THEN_HOME/test-setup-grid-api/server/Actual.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371373158609" ignored="false" />
+    <file path="/Actual.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371373152250" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +31,11 @@
       <file leaf-file-name="click_on_divs_on_top_of_map.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="24" selection-start="3674" selection-end="3674" vertical-scroll-proportion="0.4463895">
+            <state line="116" column="16" selection-start="4108" selection-end="4108" vertical-scroll-proportion="0.74183005">
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -42,7 +44,7 @@
       <file leaf-file-name="spike_style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spike_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="5" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+            <state line="22" column="15" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -64,8 +66,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="766" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1288" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -93,6 +97,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -113,7 +118,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,14 +185,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="766" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1288" height="774" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18014412" sideWeight="0.8303426" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16965742" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17979316" sideWeight="0.5974235" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40257648" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -264,26 +268,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html</url>
-          <line>38</line>
+          <line>44</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html</url>
-          <line>42</line>
+          <line>48</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html</url>
-          <line>50</line>
-          <option name="timeStamp" value="10" />
+          <line>61</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html</url>
-          <line>54</line>
-          <option name="timeStamp" value="13" />
+          <line>59</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -297,8 +301,8 @@
         <state line="44" column="60" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -313,8 +317,8 @@
         <state line="37" column="37" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -329,8 +333,8 @@
         <state line="76" column="65" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -345,8 +349,8 @@
         <state line="76" column="65" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -361,8 +365,8 @@
         <state line="57" column="33" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -377,8 +381,8 @@
         <state line="53" column="38" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -395,18 +399,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spike_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="5" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+        <state line="22" column="15" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="24" selection-start="3674" selection-end="3674" vertical-scroll-proportion="0.4463895">
+        <state line="116" column="16" selection-start="4108" selection-end="4108" vertical-scroll-proportion="0.74183005">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1371364952375" expanded="true" signature="2260:2265" placeholder="..." />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1371377869453" expanded="true" signature="3235:3240" placeholder="..." />
           </folding>
         </state>
       </provider>
