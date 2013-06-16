@@ -21,20 +21,9 @@
     </script>
     <script type="text/javascript">
 	
-		window.onload = init;
+		//ndow.onload = init;
 		
-		function init() {
-			//var canvas = document.getElementById("myCanvas");
-			//var ctx = canvas.getContext("2d");
-		   
-			//ctx.fillRect(55,25,75,75);
-			//ctx.fillRect(375,125,75,75);
-		}
-
-
-
-        function getItemAPI(){
-
+		function getItemAPI(){
             console.log('Get Item API');
 
             var url = 'http://127.0.0.1:1337/?callback=?';
@@ -59,10 +48,8 @@
         function parseJson(json)
         {
             parseMarkers(json);
-           // console.log(JSON.stringify(json));
         }
 
-        //so we want the markers for each one
         function parseMarkers(json){
 
             var listings = json.response.listings;
@@ -82,22 +69,9 @@
             //add item to display-layer
             console.log('add item to display');
             $('.display-layer').append('<div class="'+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"></div>');
-
         }
 
-        //use Jquery to add the html for a marker
-
-//        function createItem()
-//        {
-//            return ($<div></div>)
-//
-//
-//        }
-
-
-        //lets parse the markers
-
-			var map;
+        var map;
 			
 		function initialize() {
             var lat = 51.46549649642391;
@@ -119,9 +93,6 @@
                 //51.430994,-0.488156,51.499972,-0.271348
                 var bounds = map.getBounds().toUrlValue();
                 console.log(bounds);
-               // alert(bounds);
-
-
             });
 
             getItemAPI();
@@ -139,12 +110,7 @@
 					overlay.draw = function() {};
 					overlay.setMap(map);
 
-				
-				//if(map)
-				//{
-				//var proj = map.getProjection();
-				
-				var latLng = new google.maps.LatLng(40.712216,-74.22655)
+                var latLng = new google.maps.LatLng(40.712216,-74.22655)
 				//var pointCenter = proj.fromLatLngToDivPixel(latLng);
 				
 				//alert('point' + overlay.getProjection());
@@ -168,9 +134,7 @@
 		
 		//link the dot to the image of the place
 		}
-		
-		
-	  
+
     </script>
   </head>
   <body>
