@@ -23,7 +23,7 @@
 	
 		//ndow.onload = init;
 		
-		function getItemAPI(location){
+		function getItemAPI(location,centerLat,centerLng,lat_lo,lng_lo,lat_hi,lng_hi){
             console.log('Get Item API');
 
             //var url = 'http://127.0.0.1:1337/?callback=?';
@@ -31,7 +31,8 @@
             var mapWidth = $('#map-canvas').width();
             var mapHeight = $('#map-canvas').height();
 
-            var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&callback=?';
+            //var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&callback=?';
+            var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&callback=?';
 
             $.ajax({
                 type: 'GET',
@@ -82,14 +83,14 @@
         {
             console.log('move map');
             var locationLatLng = new google.maps.LatLng(responseLat, responseLng);
-             map.panTo(locationLatLng);
+            map.panTo(locationLatLng);
         }
 
         function addItemToDisplay(itemType,x,y,price_formatted,bedroom_number){
 
             //add item to display-layer
             console.log('add item to display');
-            $('.display-layer').append('<div class="'+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"><div class="price">'+price_formatted+'</div>' +
+            $('.display-layer').append('<div class="dot-item '+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"><div class="price">'+price_formatted+'</div>' +
                     '<div class="beds">Beds '+bedroom_number+'</div></div>');
         }
 
@@ -113,8 +114,28 @@
                 //perhaps use .toUrlValue() to get lat lng values as url
                 //lat_lo,lng_lo,lat_hi,lng_hi
                 //51.430994,-0.488156,51.499972,-0.271348
-                var bounds = map.getBounds().toUrlValue();
-                console.log(bounds);
+//                var bounds = map.getBounds();
+//                var northEastCorner = bounds.getNorthEast();
+//                var southWestCorner = bounds.getSouthWest();
+//
+//                console.log(southWestCorner);
+//
+//                //var lat_lo, lng_lo, lat_hi, lng_hi;
+//                lat_hi = northEastCorner.lat();
+//                lng_hi = northEastCorner.lng();
+//                lat_lo = southWestCorner.lat();
+//                lng_lo = southWestCorner.lng();
+//
+//                console.log('Movement');
+//
+//                                         //getBounds?
+//                var centerLatLng = map.getCenter();
+//                console.log(centerLatLng.lat());
+//                console.log(centerLatLng.lng());
+//
+//                var location ='hounslow';
+
+               // getItemAPI(location,centerLatLng.lat(),centerLatLng.lng(),lat_lo,lng_lo,lat_hi,lng_hi);
             });
 
 
@@ -164,6 +185,40 @@
             getItemAPI(location);
         }
 
+        function searchByCenterPoint(){
+
+            var bounds = map.getBounds();
+            var northEastCorner = bounds.getNorthEast();
+            var southWestCorner = bounds.getSouthWest();
+
+            console.log(southWestCorner);
+
+            //var lat_lo, lng_lo, lat_hi, lng_hi;
+            lat_hi = northEastCorner.lat();
+            lng_hi = northEastCorner.lng();
+            lat_lo = southWestCorner.lat();
+            lng_lo = southWestCorner.lng();
+
+            console.log('Movement');
+
+            //getBounds?
+            var centerLatLng = map.getCenter();
+            console.log(centerLatLng.lat());
+            console.log(centerLatLng.lng());
+
+            var location ='hounslow';
+
+            console.log('lat_hi' + lat_hi + 'lng_hi' + lng_hi + 'lat_lo' + lat_lo + 'lng_lo' + lng_lo);
+
+            getItemAPI(location,centerLatLng.lat(),centerLatLng.lng(),lat_lo,lng_lo,lat_hi,lng_hi);
+        }
+
+        function areaSearch(){
+
+            searchByCenterPoint();
+
+        }
+
     </script>
   </head>
   <body>
@@ -185,8 +240,9 @@
         <div class="display-layer"/>
 
         <div class='search-layer'>
-          <input class='location-input' type='text'>
+          <input class='location-input' type='text' value='hounslow'>
           <input type="button" value="Let's go!" onclick="search()">
+          <input type="button" value="Area Search" onclick="areaSearch()">
         </div>
 
         <div style="z-index:0; position:relative; top:0; " id="map-canvas"/>

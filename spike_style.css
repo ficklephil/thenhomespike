@@ -23,6 +23,17 @@
     left:100px;
 }
 
+.dot-item{
+    z-index:2;
+    position:absolute;
+
+    border-radius: 50%;
+    background-color: #777777;
+    width: 10px;
+    height: 10px;
+
+}
+
 .house{
 
 
@@ -56,3 +67,4 @@
     position:absolute;
     top:50px;
 }
+
