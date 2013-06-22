@@ -71,11 +71,12 @@
 
             for(var i=0; i < listings.length; i++){
                 console.log("Item Title " + listings[i].title);
-                console.log("Item Marker X " + listings[i].itemMarkerX);
-                console.log("Item Marker Y " + listings[i].itemMarkerY);
+                console.log("Item Marker X " + listings[i].longitudeXCoor);
+                console.log("Item Marker Y " + listings[i].latitudeYCoor);
                 console.log("Price " + listings[i].price);
 
-                addItemToDisplay(listings[i].property_type,listings[i].itemMarkerX, listings[i].itemMarkerY,listings[i].price_formatted, listings[i].bedroom_number );
+                //Longitude is X, Latitude is Y
+                addItemToDisplay(listings[i].property_type,listings[i].longitudeXCoor, listings[i].latitudeYCoor,listings[i].price_formatted, listings[i].bedroom_number, listings[i].thumb_url );
             }
         }
 
@@ -86,23 +87,23 @@
             map.panTo(locationLatLng);
         }
 
-        function addItemToDisplay(itemType,x,y,price_formatted,bedroom_number){
+        function addItemToDisplay(itemType,longitudeXCoor,latitudeYCoor,price_formatted,bedroom_number,imageSrc){
 
             //add item to display-layer
             console.log('add item to display');
-            $('.display-layer').append('<div class="dot-item '+itemType+'" style="left:'+ x +'px; top:'+ y +'px;"><div class="price">'+price_formatted+'</div>' +
-                    '<div class="beds">Beds '+bedroom_number+'</div></div>');
+            $('.display-layer').append('<div class="dot-item '+itemType+'" style="left:'+ longitudeXCoor +'px; top:'+ latitudeYCoor +'px;"><div class="price">'+price_formatted+'</div>' +
+                    '<div class="beds">Beds '+bedroom_number+'</div><div class="item-image"><img src="'+imageSrc+'" ></div></div>');
         }
 
         var map;
 			
 		function initialize() {
-            var lat = 51.46549649642391;
-            var lng = -0.37975222192383473;
+            var lat = 51.46310355210425;
+            var lng = -0.36240399999992734;
 
             var mapOptions = {
 			  center: new google.maps.LatLng(lat, lng),
-			  zoom: 13,
+			  zoom: 15,
 			  sensors:false,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
@@ -139,9 +140,29 @@
             });
 
 
-			placeDotOnMapAtXY();
+            placeMarkerOnMap();
+			//placeDotOnMapAtXY();
 		  }
 		  google.maps.event.addDomListener(window, 'load', initialize);
+
+        function placeMarkerOnMap(){
+            console.log('placing marker on map');
+
+            var myLatlng = new google.maps.LatLng(51.45908,-0.36889);
+//            var mapOptions = {
+//                zoom: 4,
+//                center: myLatlng,
+//                mapTypeId: google.maps.MapTypeId.ROADMAP
+//            }
+            //var map = new google.maps.Map(document.getElementById('map-canvas'));
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Hello World!'
+            });
+
+        }
 
         function placeDotOnMapAtXY(){
 			//mark a point
