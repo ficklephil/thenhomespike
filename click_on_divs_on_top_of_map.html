@@ -16,6 +16,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="spike_style.css" />
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA5Zhn0d70pprD2K2ogELhYwmJy_N32le4&sensor=false">
     </script>
@@ -23,16 +25,33 @@
 	
 		//ndow.onload = init;
 		
-		function getItemAPI(location,centerLat,centerLng,lat_lo,lng_lo,lat_hi,lng_hi){
-            console.log('Get Item API');
+		function getItemAPI(location,centerLat,centerLng,lat_lo,lng_lo,lat_hi,lng_hi,page){
 
+            console.log('Page Number Sent : ' + page);
             //var url = 'http://127.0.0.1:1337/?callback=?';
 
             var mapWidth = $('#map-canvas').width();
             var mapHeight = $('#map-canvas').height();
 
+            var minPrice = $('.min-price').val();
+            var maxPrice = $('.max-price').val();
+            var updatedMin = $('.updated-min').val();
+
+            var date = new Date(updatedMin * 1000);
+
+            console.log('minPrice' + minPrice);
+            console.log('maxPrice' + maxPrice);
+            console.log('updatedMin' + updatedMin);
+            console.log('date' + date.getTime());
+
+            console.log('getDate' + date.getDate());
+            console.log('getMonth' + date.getMonth());
+            console.log('getYear' + date.getYear());
+
+            $('.update-date').text('Start Date :' + date.getDate() + '/' + (date.getMonth()+1));
+
             //var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&callback=?';
-            var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&callback=?';
+            var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&page='+page+'&min_price='+minPrice+'&max_price='+maxPrice+'&updated_min='+updatedMin+'&callback=?';
 
             $.ajax({
                 type: 'GET',
@@ -56,6 +75,10 @@
             parseMarkers(json);
         }
 
+        var totalPages;
+        var currentPage;
+        var totalResults;
+
         function parseMarkers(json){
 
             console.log('parse markers');
@@ -63,22 +86,31 @@
             var responseLat = json.response.locations[0].center_lat;
             var responseLng = json.response.locations[0].center_long;
 
+            currentPage = json.response.page;
+            totalPages = json.response.total_pages;
+            totalResults = json.response.total_results;
            // console.log('lat + lng : ' + JSON.stringify(responseLat.center_lat));// + responseLng);
+
+            $('.page-number-display').text('Page :' + currentPage + ' of ' + totalPages);
+            $('.results-number-display').text('Total Results :' + totalResults);
+
             moveMap(responseLat,responseLng);
 
             var listings = json.response.listings;
             console.log(listings.length);
 
             for(var i=0; i < listings.length; i++){
-                console.log("Item Title " + listings[i].title);
-                console.log("Item Marker X " + listings[i].longitudeXCoor);
-                console.log("Item Marker Y " + listings[i].latitudeYCoor);
-                console.log("Price " + listings[i].price);
+//                console.log("Item Title " + listings[i].title);
+//                console.log("Item Marker X " + listings[i].longitudeXCoor);
+//                console.log("Item Marker Y " + listings[i].latitudeYCoor);
+//                console.log("Price " + listings[i].price);
 
                 //Longitude is X, Latitude is Y
-                addItemToDisplay(listings[i].property_type,listings[i].longitudeXCoor, listings[i].latitudeYCoor,listings[i].price_formatted, listings[i].bedroom_number, listings[i].thumb_url );
+                addItemToDisplay(listings[i].property_type,listings[i].longitudeXCoor, listings[i].latitudeYCoor,listings[i].price_formatted, listings[i].bedroom_number, listings[i].thumb_url, listings[i].lister_url );
             }
         }
+
+
 
         function moveMap(responseLat,responseLng)
         {
@@ -87,12 +119,21 @@
             map.panTo(locationLatLng);
         }
 
-        function addItemToDisplay(itemType,longitudeXCoor,latitudeYCoor,price_formatted,bedroom_number,imageSrc){
+        function addItemToDisplay(itemType,longitudeXCoor,latitudeYCoor,price_formatted,bedroom_number,imageSrc,imageLink){
 
             //add item to display-layer
             console.log('add item to display');
             $('.display-layer').append('<div class="dot-item '+itemType+'" style="left:'+ longitudeXCoor +'px; top:'+ latitudeYCoor +'px;"><div class="price">'+price_formatted+'</div>' +
-                    '<div class="beds">Beds '+bedroom_number+'</div><div class="item-image"><img src="'+imageSrc+'" ></div></div>');
+                    '<div class="beds">Beds '+bedroom_number+'</div><a href="'+imageLink+'" target="_blank"><div class="item-image"><img src="'+imageSrc+'" ></div></a></div>');
+        }
+
+        function clearMarkersOnMap(){
+            $('.dot-item').remove();
+        }
+
+        function search(page){
+            clearMarkersOnMap();
+            searchByCenterPoint(page);
         }
 
         var map;
@@ -110,33 +151,11 @@
 			map = new google.maps.Map(document.getElementById("map-canvas"),
 				mapOptions);
 
-            google.maps.event.addListener(map, 'idle', function(){
+            google.maps.event.addListener(map, 'dragend', function(){
 
-                //perhaps use .toUrlValue() to get lat lng values as url
-                //lat_lo,lng_lo,lat_hi,lng_hi
-                //51.430994,-0.488156,51.499972,-0.271348
-//                var bounds = map.getBounds();
-//                var northEastCorner = bounds.getNorthEast();
-//                var southWestCorner = bounds.getSouthWest();
-//
-//                console.log(southWestCorner);
-//
-//                //var lat_lo, lng_lo, lat_hi, lng_hi;
-//                lat_hi = northEastCorner.lat();
-//                lng_hi = northEastCorner.lng();
-//                lat_lo = southWestCorner.lat();
-//                lng_lo = southWestCorner.lng();
-//
-//                console.log('Movement');
-//
-//                                         //getBounds?
-//                var centerLatLng = map.getCenter();
-//                console.log(centerLatLng.lat());
-//                console.log(centerLatLng.lng());
-//
-//                var location ='hounslow';
+                console.log('idle event');
 
-               // getItemAPI(location,centerLatLng.lat(),centerLatLng.lng(),lat_lo,lng_lo,lat_hi,lng_hi);
+                search(1);
             });
 
 
@@ -199,14 +218,14 @@
 		//link the dot to the image of the place
 		}
 
-        function search(){
+        function searchByLocation(page){
             console.log('Search for :' + $('.location-input').val());
 
             var location = $('.location-input').val();
             getItemAPI(location);
         }
 
-        function searchByCenterPoint(){
+        function searchByCenterPoint(page){
 
             var bounds = map.getBounds();
             var northEastCorner = bounds.getNorthEast();
@@ -231,13 +250,33 @@
 
             console.log('lat_hi' + lat_hi + 'lng_hi' + lng_hi + 'lat_lo' + lat_lo + 'lng_lo' + lng_lo);
 
-            getItemAPI(location,centerLatLng.lat(),centerLatLng.lng(),lat_lo,lng_lo,lat_hi,lng_hi);
+            getItemAPI(location,centerLatLng.lat(),centerLatLng.lng(),lat_lo,lng_lo,lat_hi,lng_hi,page);
         }
 
         function areaSearch(){
+            searchByCenterPoint(1);
+        }
 
-            searchByCenterPoint();
+        var currentPageNumber = 1;
 
+        function next(){
+            console.log('get Current Page : ' + currentPage);
+            console.log('get Total Pages' +totalPages);
+
+            if(currentPage < totalPages)
+            {
+                search(++currentPage);
+            }
+        }
+
+        function previous(){
+
+            console.log('get Current Page : ' + currentPage);
+            console.log('get Total Pages' + totalPages);
+
+            if(currentPage > 1){//can only send 1
+            search(--currentPage);
+            }
         }
 
     </script>
@@ -257,16 +296,29 @@
   <!--<div style="z-index:2; position:absolute; top:50px;left:400px;">-->
     <!--<div class="item-container">hi</div>-->
   <!--</div>-->
-          <div>hello</div>
-        <div class="display-layer"/>
-
         <div class='search-layer'>
-          <input class='location-input' type='text' value='hounslow'>
-          <input type="button" value="Let's go!" onclick="search()">
-          <input type="button" value="Area Search" onclick="areaSearch()">
+          <!--<input class='location-input' type='text' value='hounslow'>-->
+          <!--<input type="button" value="Let's go!" onclick="searchByLocation()">-->
+          <!--<input type="button" value="Area Search" onclick="areaSearch()">-->
+
+          <label >Min Price : </label>
+          <input class='min-price' type="text" value='0'>
+          <label >Max Price : </label>
+          <input class='max-price' type="text" value='2000000'>
+          <label class='update-date' >Start Date : </label>
+          <input class='updated-min' type="text" value='1371272400'>
+          <!--<input type="date" class='updated-min' name="updated-min">-->
+            <!--<input type="text" id="datepicker" />-->
+
+            <input type="button" value="Next" onclick="next()">
+            <input type="button" value="Previous" onclick="previous()">
+            <label class='page-number-display'>Page 1 / 7</label>
+            <label class='results-number-display'>Results Number</label>
+
         </div>
 
-        <div style="z-index:0; position:relative; top:0; " id="map-canvas"/>
+          <div class="display-layer"/>
+          <div style="z-index:0; position:relative; top:0; " id="map-canvas"/>
 
     </body>
 </html>
