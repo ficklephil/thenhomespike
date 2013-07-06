@@ -4,12 +4,44 @@
     <list default="true" id="80d4b067-d484-40d7-a76c-89e645d33841" name="Default" comment="" />
     <ignored path="ThenHomeSpike.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/click_on_divs_on_top_of_map.html" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1372526811578" ignored="false" />
+    <file path="/click_on_divs_on_top_of_map.html" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373096704687" ignored="false" />
     <file path="C:/THEN_HOME/test-setup-grid-api/server/AddDivPixelToNestoriaOutput.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371365247578" ignored="false" />
-    <file path="/spike_style.css" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1372524533921" ignored="false" />
+    <file path="/spike_style.css" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373096822031" ignored="false" />
     <file path="/Actual.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1372524847312" ignored="false" />
     <file path="$PROJECT_DIR$/../Philipsat/index.html" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371991986531" ignored="false" />
     <file path="/index.html" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1371991961203" ignored="false" />
+    <file path="/Dummy.txt" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1372705596078" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/lib/server.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/test-digest-auth.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/test/browser.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/test/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/test/server.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/example/usage.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/test-https-strict.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/form-data/lib/form_data.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/test-basic-auth.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/tunnel-agent/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049629234" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/ssl/ca/server.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/test-piped-redirect.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/test-proxy.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/ficklephil-then-home-server/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/lib/client.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/tests/test-httpModule.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/lib/browser.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/http-signature/package.json" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049558375" ignored="false" />
+    <file path="C:/THEN_HOME/then-home-service/bin/server.js" changelist="80d4b067-d484-40d7-a76c-89e645d33841" time="1373049792593" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,39 +61,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="click_on_divs_on_top_of_map.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="45" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.1954023">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actual.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/THEN_HOME/test-setup-grid-api/server/Actual.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="25" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="32" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spike_style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="spike_style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spike_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="29" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
+            <state line="55" column="26" selection-start="956" selection-end="956" vertical-scroll-proportion="0.8262351">
               <folding />
             </state>
           </provider>
@@ -77,17 +80,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spike_style.css" />
         <option value="C:/THEN_HOME/test-setup-grid-api/server/Actual.js" />
         <option value="$PROJECT_DIR$/click_on_divs_on_top_of_map.html" />
+        <option value="$PROJECT_DIR$/spike_style.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1288" />
-    <option name="height" value="774" />
+    <option name="width" value="1280" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -103,7 +104,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -114,29 +115,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThenHomeSpike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThenHomeSpike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thenhomespike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -203,16 +182,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="774" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37470168" sideWeight="0.80515295" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17337461" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14558473" sideWeight="0.5378422" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4613003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19484702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19484702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -283,18 +262,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html</url>
-          <line>62</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html</url>
-          <line>66</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="20" />
     </breakpoint-manager>
   </component>
@@ -304,13 +271,9 @@
         <state line="19" column="58" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="58" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -318,55 +281,14 @@
         <state line="19" column="58" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="65" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="58" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="65" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="58" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="33" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="58" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="38" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -381,31 +303,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="32" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spike_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="52" column="13" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://C:/THEN_HOME/test-setup-grid-api/server/Actual.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="25" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="89" column="104" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/click_on_divs_on_top_of_map.html">
+    <entry file="file://$PROJECT_DIR$/spike_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="45" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.1954023">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="55" column="26" selection-start="956" selection-end="956" vertical-scroll-proportion="0.8262351">
+          <folding />
         </state>
       </provider>
     </entry>

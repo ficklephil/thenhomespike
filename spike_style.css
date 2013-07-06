@@ -25,7 +25,7 @@
     height:28px;
 }
 
-.dot-item{
+.item-dot{
     z-index:2;
     position:absolute;
 
@@ -33,7 +33,30 @@
     background-color: #777777;
     width: 10px;
     height: 10px;
+}
 
+.item-box{
+    z-index:2;
+    position:absolute;
+    border:1px solid #efefef;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #efefef;
+    width: 84px;
+    height: 92px;
+    margin-top:-100px;
+    margin-left:-92px;
+}
+
+.item-box:hover{
+    z-index:2;
+    position:absolute;
+    border:1px solid #efefef;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #ffcc00;
+    width: 84px;
+    height: 92px;
+    margin-top:-100px;
+    margin-left:-92px;
 }
 
 .house{
@@ -50,15 +73,36 @@
 }
 
 .item-image{
-    position:absolute;
-    top:70px;
-    width:60px;
+    border:0px solid green;
     height:60px;
+    padding:4px;
+}
+
+.item-image img{
+    border:0px solid blue;
+    width:76px;
+    height:58px;
+}
+
+.item-data-container{
+
+    border:0px solid green;
+    /*padding-right:2px;*/
+}
+
+.item-data-field-one{
+    /*border:1px solid blue;*/
+    margin-left:4px;
+    float:left;
+}
+
+.item-data-field-two{
+    /*border:1px solid red;*/
+    margin-right:2px;
+    float:right;
 }
 
 .flat{
-
-
     z-index:2;
     position:absolute;
 
