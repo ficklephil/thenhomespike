@@ -42,7 +42,8 @@
             $('.update-date').text('Start Date :' + date.getDate() + '/' + (date.getMonth()+1));
 
             //var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&callback=?';
-            var url = 'http://thenhome.nodejitsu.com/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&page='+page+'&min_price='+minPrice+'&max_price='+maxPrice+'&updated_min='+updatedMin+'&callback=?';
+            //var url = 'http://thenhome.nodejitsu.com/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&page='+page+'&min_price='+minPrice+'&max_price='+maxPrice+'&updated_min='+updatedMin+'&callback=?';
+            var url = 'http://localhost:8080/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&page='+page+'&min_price='+minPrice+'&max_price='+maxPrice+'&updated_min='+updatedMin+'&callback=?';
 
             $.ajax({
                 type: 'GET',
@@ -54,11 +55,19 @@
                 success: function(json) {
                     //console.log(JSON.stringify(json.request));
                     parseJson(json);
+                    parseGrid(json);
                 },
                 error: function(e) {
                     console.log(e.message);
                 }
             });
+        }
+
+        function parseGrid(json){
+            var gridItem = json.response.gridlayout;
+            for(var i=0; i < gridItem.length; i++){
+                addGridItemToDisplay(gridItem[i].x,gridItem[i].y);
+            }
         }
 
         function parseJson(json)
@@ -110,6 +119,10 @@
             map.panTo(locationLatLng);
         }
 
+        function addGridItemToDisplay(gridX,gridY){
+            $('.display-layer').append('<div class="grid-item" style="left:'+ gridX +'px; top:'+ gridY +'px;"></div>');
+        }
+
         function addItemToDisplay(itemType,longitudeXCoor,latitudeYCoor,price_formatted,bedroom_number,imageSrc,imageLink){
 
             $('.display-layer').append('<div class="item-dot '+itemType+'" style="left:'+ longitudeXCoor +'px; top:'+ latitudeYCoor +'px;">');
@@ -126,6 +139,7 @@
         function clearMarkersOnMap(){
             $('.item-dot').remove();
             $('.item-box').remove();
+            $('.grid-item').remove();
         }
 
         function search(page){

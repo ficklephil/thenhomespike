@@ -59,6 +59,14 @@
     margin-left:-92px;
 }
 
+.grid-item{
+    z-index:10;
+    position:absolute;
+    width:2px;
+    height:2px;
+    border:1px solid red;
+}
+
 .house{
 
 
